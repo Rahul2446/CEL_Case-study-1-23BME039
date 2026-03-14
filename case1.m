@@ -12,15 +12,15 @@ G1 = 1/R1;
 G2 = 1/R2;     
 
 
-A = [ (G2+G1+G1)   -G1            0            0;
+A = [ (G2+G1)   -G1            0            0;
       -G1        (G2+G1+G1)     -G1            0;
        0           -G1        (G2+G1+G1)     -G1;
-       0            0           -G1        (G2+G1+G1)];
+       0            0           -G1        (G2+G1)];
 
-B = [ Tamb*(G2+G1);
+B = [ Tamb*(G2);
       Tamb*(G2);
       Tamb*(G2);
-      Tamb*(G2+G1) + Qgen ];
+      Tamb*(G2) + Qgen ];
 
 
 T = A\B;
